@@ -22,11 +22,22 @@ export default function Home() {
   };
 
   return (
-    <main className="max-w-2xl mx-auto p-8 space-y-8">
-      <h1 className="text-2xl font-bold mb-4">Resume Chatbot</h1>
-      <SendEmailForm />
-      <ChatInput onSend={handleSend} />
-      <ChatHistory history={history} />
+    <main className="max-w-5xl mx-auto p-8 space-y-4">
+      <h1 className="text-2xl font-bold mb-6">Resume Chatbot</h1>
+
+      <div className="flex flex-col md:flex-row gap-6">
+        {/* Left side: Email form */}
+        <div className="md:w-1/2 w-full">
+          <SendEmailForm />
+        </div>
+
+        {/* Right side: Chat components */}
+        <div className="md:w-1/2 w-full flex flex-col gap-4">
+          <ChatInput onSend={handleSend} />
+          <ChatHistory history={history} />
+        </div>
+      </div>
     </main>
   );
+
 }

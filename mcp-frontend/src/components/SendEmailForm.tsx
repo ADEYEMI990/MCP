@@ -34,6 +34,7 @@ export default function SendEmailForm() {
       setLoading(false);
     }
   };
+  
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4 p-4 border rounded-md max-w-md">
@@ -71,7 +72,27 @@ export default function SendEmailForm() {
         {loading ? 'Sending...' : 'Send Email'}
       </button>
 
-      {result && <p className="text-sm mt-2">{result}</p>}
+      {result && (
+        <div>
+          <p className="text-sm text-gray-600">
+           <strong className="text-gray-800">Preview:</strong> If you are using{" "}
+           your email won’t go to a real inbox. You can view it only via the preview link below.
+          </p>
+          <div className="mt-2 text-sm text-green-600 break-words space-y-1">
+          <p>{result.split('ID:')[0].trim()} ID:</p>
+          <a
+            href={result.split('ID:')[1]?.trim()}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline text-blue-700 break-all"
+          >
+            {result.split('ID:')[1]?.trim()}
+          </a>
+          </div>
+        </div>
+  )
+        
+      }
     </form>
   );
 }
