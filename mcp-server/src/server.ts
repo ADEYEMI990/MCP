@@ -9,6 +9,10 @@ const PORT = process.env.PORT || 3001;
 app.use(cors());
 app.use(express.json());
 
+app.get('/', (_req, res) => {
+  res.send('✅ MCP Server is running. Use /api/chat or /api/send-email endpoints.');
+});
+
 app.post('/api/chat', async (req, res) => {
   try {
     const { question } = req.body;
