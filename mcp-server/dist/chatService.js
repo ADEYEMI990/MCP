@@ -7,7 +7,7 @@ exports.chatWithResume = chatWithResume;
 const fs_1 = __importDefault(require("fs"));
 const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
-const resume = JSON.parse(fs_1.default.readFileSync('resume.json', 'utf-8'));
+const resume = JSON.parse(fs_1.default.readFileSync('dist/src/resume.json', 'utf-8'));
 async function chatWithResume(question) {
     const prompt = `You are an assistant answering questions about the following resume:\n${JSON.stringify(resume, null, 2)}\n\nQuestion: ${question}\nAnswer:`;
     const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {

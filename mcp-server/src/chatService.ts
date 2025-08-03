@@ -2,7 +2,7 @@ import fs from 'fs';
 import dotenv from 'dotenv';
 dotenv.config();
 
-const resume = JSON.parse(fs.readFileSync('resume.json', 'utf-8'));
+const resume = JSON.parse(fs.readFileSync('dist/src/resume.json', 'utf-8'));
 
 export async function chatWithResume(question: string): Promise<string> {
   const prompt = `You are an assistant answering questions about the following resume:\n${JSON.stringify(resume, null, 2)}\n\nQuestion: ${question}\nAnswer:`;

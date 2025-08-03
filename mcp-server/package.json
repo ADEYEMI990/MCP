@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "dev": "ts-node src/index.ts",
-    "build": "tsc",
+    "build": "tsc && xcopy src\\resume.json dist\\src\\ /Y",
     "start": "node dist/server.js",
     "lint": "echo \"Add ESLint or similar tooling here\""
   },
