@@ -1,4 +1,16 @@
 {
+  "name": "mcp-server",
+  "version": "1.0.0",
+  "description": "Model Context Protocol (MCP) backend server",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "ts-node src/index.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "lint": "echo \"Add ESLint or similar tooling here\""
+  },
+  "author": "Adeyemi Ibrahim",
+  "license": "MIT",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^17.2.1",
@@ -9,8 +21,12 @@
   "devDependencies": {
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.3",
-    "@types/node": "^24.1.0",
+    "@types/node": "^20.5.1",
     "ts-node": "^10.9.2",
-    "typescript": "^5.9.2"
+    "typescript": "^5.3.3"
   }
 }
+
+
+
+

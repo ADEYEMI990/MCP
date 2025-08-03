@@ -1,0 +1,24 @@
+{
+  "name": "Ibrahim Adeyemi",
+  "positions": [
+    {
+      "title": "Software Development Intern",
+      "company": "Hotsourced",
+      "duration": "Jan 2024 – Jul 2024",
+      "responsibilities": [
+        "Built and maintained mobile applications using React Native",
+        "Integrated RESTful APIs and Firebase for real-time data syncing"
+      ]
+    },
+    {
+      "title": "Full-Stack Developer",
+      "company": "Freelance",
+      "duration": "2021 – Present",
+      "responsibilities": [
+        "Developed backend services with Node.js and Express",
+        "Built frontend apps with React and Next.js"
+      ]
+    }
+  ],
+  "skills": ["JavaScript", "TypeScript", "React", "Node.js", "Next.js", "Firebase"]
+}
