@@ -22,7 +22,7 @@ export default function Home() {
   };
 
   return (
-    <main className="max-w-5xl mx-auto p-7 space-y-4">
+    <main className="max-w-5xl mx-auto p-8 space-y-4">
       <h1 className="text-2xl font-bold mb-5">Resume Chatbot</h1>
 
       <div className="flex flex-col md:flex-row gap-6">
